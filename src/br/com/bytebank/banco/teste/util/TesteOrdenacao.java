@@ -10,7 +10,7 @@ import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 
-public class Teste {
+public class TesteOrdenacao {
 
 
     public static void main(String[] args) {
@@ -45,41 +45,28 @@ public class Teste {
         lista.add(cc3);
         lista.add(cc4);
         
-        // Function Object
-        //NumeroDaContaComparator2 comparator = new NumeroDaContaComparator2();
+        for (Conta conta : lista) {
+        	System.out.println(conta);
+		}
         
-        lista.sort(new Comparator<Conta>() { // Classe anônima
-	        	@Override
-	        	public int compare(Conta c1, Conta c2) {
-	        		return Integer.compare(c1.getNumero(), c2.getNumero());
-	        	}
-        	}
-        );
+        // NumeroDaContaComparator comparator = new NumeroDaContaComparator();
+        //lista.sort(new TitularDaContaComparator());
+       
+        //Collections.sort(lista, new NumeroDaContaComparator());
+        //Collections.reverse(lista);
+        lista.sort(null); // organiza na ordem natural da classe
+        Collections.sort(lista); // organiza na ordem natural da classe (legado)
         
-        Comparator<Conta> comp = new Comparator<Conta>() {
-        	@Override
-        	public int compare(Conta c1, Conta c2) {
-        		String nomeC1 = c1.getTitular().getNome();
-        		String nomeC2 = c2.getTitular().getNome();
-        		return nomeC1.compareTo(nomeC2);
-        	}
-        };
+        System.out.println("-----------------");
         
         for (Conta conta : lista) {
 			System.out.println(conta + " , " + conta.getTitular().getNome());
 		}
+
     }
 }
 
-class NumeroDaContaComparator2 implements Comparator<Conta> {
-
-	@Override
-	public int compare(Conta c1, Conta c2) {
-		return Integer.compare(c1.getNumero(), c2.getNumero());
-	}
-}
-
-class TitularDaContaComparator2 implements Comparator<Conta> {
+class TitularDaContaComparator implements Comparator<Conta> {
 
 	@Override
 	public int compare(Conta c1, Conta c2) {
@@ -90,5 +77,12 @@ class TitularDaContaComparator2 implements Comparator<Conta> {
 	}
 }
 
+class NumeroDaContaComparator implements Comparator<Conta> {
 
+	@Override
+	public int compare(Conta c1, Conta c2) {
+		return Integer.compare(c1.getNumero(), c2.getNumero());
+	}
+	
+}
 
