@@ -1,6 +1,7 @@
 package br.com.bytebank.banco.teste.util;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -50,6 +51,9 @@ public class Teste {
         
         // NumeroDaContaComparator comparator = new NumeroDaContaComparator();
         lista.sort(new TitularDaContaComparator());
+        
+        Collections.sort(lista, new NumeroDaContaComparator());
+        Collections.reverse(lista);
         
         System.out.println("-----------------");
         
