@@ -50,10 +50,12 @@ public class Teste {
 		}
         
         // NumeroDaContaComparator comparator = new NumeroDaContaComparator();
-        lista.sort(new TitularDaContaComparator());
-        
-        Collections.sort(lista, new NumeroDaContaComparator());
-        Collections.reverse(lista);
+        //lista.sort(new TitularDaContaComparator());
+       
+        //Collections.sort(lista, new NumeroDaContaComparator());
+        //Collections.reverse(lista);
+        lista.sort(null); // organiza na ordem natural da classe
+        Collections.sort(lista); // organiza na ordem natural da classe (legado)
         
         System.out.println("-----------------");
         
