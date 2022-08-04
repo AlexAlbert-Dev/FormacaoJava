@@ -51,14 +51,14 @@ public class TesteLambda {
         
         lista.sort( (c1, c2) -> Integer.compare(c1.getNumero(), c2.getNumero()) );
         
-        Comparator<Conta> comp = (Conta c1, Conta c2) -> {
+        Comparator<Conta> comp = (c1, c2) -> {
         		String nomeC1 = c1.getTitular().getNome();
         		String nomeC2 = c2.getTitular().getNome();
         		return nomeC1.compareTo(nomeC2);
         };
         
         // lista.sort( comp ); // Ordenar por String
-        
+       
         lista.forEach( (conta) -> System.out.println(conta + " , " + conta.getTitular().getNome()));
     }
 }
