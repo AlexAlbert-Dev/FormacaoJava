@@ -16,11 +16,11 @@ public class TesteEscritaComTeclado {
 
 	public static void main(String[] args) throws IOException {
 		
-		// Fluxo de Entrada com Arquivo
+		// Fluxo de Entrada com Teclado
 		InputStream fis = System.in;
 		Reader isr = new InputStreamReader(fis);	
 		BufferedReader br = new BufferedReader(isr);	
-		
+		// Fluxo de Saída com Arquivo
 		OutputStream fos = new FileOutputStream("teclado.txt");
 		Writer osw = new OutputStreamWriter(fos);
 		BufferedWriter bw = new BufferedWriter(osw);

@@ -17,11 +17,10 @@ public class TesteCopiarArquivo {
 	public static void main(String[] args) throws IOException {
 		
 		// Fluxo de Entrada com Arquivo
-		// Padrão Decorator
-		InputStream fis = new FileInputStream("lorem.txt"); // Interpreta os bits e bytes
-		Reader isr = new InputStreamReader(fis);	// transforma bytes em caracteres
-		BufferedReader br = new BufferedReader(isr);	// transforma caracteres em linhas
-		
+		InputStream fis = new FileInputStream("lorem.txt");
+		Reader isr = new InputStreamReader(fis);
+		BufferedReader br = new BufferedReader(isr);
+		// Fluxo de Saída com Arquivo
 		OutputStream fos = new FileOutputStream("lorem3.txt");
 		Writer osw = new OutputStreamWriter(fos);
 		BufferedWriter bw = new BufferedWriter(osw);

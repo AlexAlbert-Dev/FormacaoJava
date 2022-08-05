@@ -16,11 +16,11 @@ public class TesteSaidaConsole {
 
 	public static void main(String[] args) throws IOException {
 		
-		// Fluxo de Entrada com Arquivo
+		// Fluxo de Entrada com Teclado
 		InputStream fis = System.in;
 		Reader isr = new InputStreamReader(fis);	
 		BufferedReader br = new BufferedReader(isr);	
-		
+		// Fluxo de Saída com Console
 		OutputStream fos = System.out;
 		Writer osw = new OutputStreamWriter(fos);
 		BufferedWriter bw = new BufferedWriter(osw);

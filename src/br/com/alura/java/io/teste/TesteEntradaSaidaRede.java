@@ -17,11 +17,12 @@ public class TesteEntradaSaidaRede {
 
 	public static void main(String[] args) throws IOException {
 		
+		// Fluxo de Entrada com Rede
 		Socket s = new Socket();
 		InputStream fis = s.getInputStream(); // System.in; // new FileInputStream("lorem.txt");
 		Reader isr = new InputStreamReader(fis);	
 		BufferedReader br = new BufferedReader(isr);	
-		
+		// Fluxo de Saída com Rede
 		OutputStream fos = s.getOutputStream(); // System.out; // new FileOutputStream("lorem3.txt");
 		Writer osw = new OutputStreamWriter(fos);
 		BufferedWriter bw = new BufferedWriter(osw);
