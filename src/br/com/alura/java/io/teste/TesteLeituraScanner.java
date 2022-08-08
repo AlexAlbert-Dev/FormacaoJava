@@ -18,17 +18,18 @@ public class TesteLeituraScanner {
 			linhaScanner.useLocale(Locale.US);
 			linhaScanner.useDelimiter(",");
 			
-			String valor1 = linhaScanner.next();
-			int valor2 = linhaScanner.nextInt();
-			int valor3 = linhaScanner.nextInt();
-			String valor4 = linhaScanner.next();
-			double valor5 = linhaScanner.nextDouble();
+			String tipoConta = linhaScanner.next();
+			int agencia = linhaScanner.nextInt();
+			int numero = linhaScanner.nextInt();
+			String titular = linhaScanner.next();
+			double saldo = linhaScanner.nextDouble();
 			
-			System.out.println(valor1 + valor2 + valor3 + valor4 + valor5);
+			String valorFormatado = String.format(new Locale("pt", "BR"), "%s - %04d-%08d, %12s: %010.2f %n", 
+													tipoConta, agencia, numero, titular, saldo);
+			System.out.println(valorFormatado);
 			
 			linhaScanner.close();
-//			String[] valores = linha.split(",");
-//			System.out.println(valores[3]);
+
 		}
 		
 		scanner.close();
