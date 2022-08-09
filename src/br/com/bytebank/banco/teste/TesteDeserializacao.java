@@ -15,7 +15,7 @@ public class TesteDeserializacao {
 		ContaCorrente cc = (ContaCorrente) ois.readObject();
 		ois.close();
 		System.out.println(cc.getSaldo());
-		System.out.println(cc.getTitular().getNome());
+		System.out.println(cc.getTitular());
 		
 	}
 

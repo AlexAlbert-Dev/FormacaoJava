@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @author Alex Albert
  *
  */
-public class Cliente implements Serializable{
+public class Cliente {
 	private String nome;
 	private String cpf;
 	private String profissao;

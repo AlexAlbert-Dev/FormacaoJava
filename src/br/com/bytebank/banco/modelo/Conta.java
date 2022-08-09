@@ -12,8 +12,8 @@ public abstract class Conta implements Comparable<Conta>, Serializable {
 	protected double saldo;
 	private int agencia;
 	private int numero;
-	private Cliente titular;
-	private static int total = 0;		//static quer dizer da classe
+	private transient Cliente titular;	// transient = atributo não será serializado ou desserializado
+	private static int total = 0;
 
 	
 	/**
