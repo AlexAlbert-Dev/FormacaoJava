@@ -22,5 +22,17 @@ public class TestaCursoComAluno {
 		javaColecoes.getAlunos().forEach(a -> {
 			System.out.println(a);
 		});
+		
+		System.out.println("O aluno " + a1 + "está matriculado?");
+		System.out.println(javaColecoes.estaMatriculado(a1));
+		
+		Aluno turini = new Aluno("Rodrigo Turini", 34672);
+		System.out.println(javaColecoes.estaMatriculado(turini));
+		System.out.println("0 a1 é equals ao TUrini?");
+		System.out.println(a1.equals(turini));
+		// Se equals obj1 == obj2 for true, obrigatoriamente o seguinte é true:
+		System.out.println(a1.hashCode() == turini.hashCode());
+		
+		
 	}
 }
