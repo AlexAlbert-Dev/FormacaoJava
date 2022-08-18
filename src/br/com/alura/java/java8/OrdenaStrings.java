@@ -17,6 +17,10 @@ public class OrdenaStrings {
 		Comparator<String> comparador = new ComparadorPorTamanho();
 		palavras.sort(comparador);
 		System.out.println(palavras);
+		
+		for(String p : palavras) {
+			System.out.println(p);
+		}
 	}
 }
 
