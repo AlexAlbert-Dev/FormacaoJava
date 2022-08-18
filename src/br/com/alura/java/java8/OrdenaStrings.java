@@ -1,6 +1,7 @@
 package br.com.alura.java.java8;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class OrdenaStrings {
@@ -12,8 +13,7 @@ public class OrdenaStrings {
 		palavras.add("editora casa do codigo");
 		palavras.add("caelum");
 		
-		palavras.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
-		
+		palavras.sort(Comparator.comparing(s -> s.length()));
 		System.out.println(palavras);
 		
 		palavras.forEach(s -> System.out.println(s));
