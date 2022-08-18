@@ -15,7 +15,7 @@ public class OrdenaStrings {
 		palavras.add("caelum");
 		
 		Comparator<String> comparador = new ComparadorPorTamanho();
-		Collections.sort(palavras, comparador);
+		palavras.sort(comparador);
 		System.out.println(palavras);
 	}
 }
