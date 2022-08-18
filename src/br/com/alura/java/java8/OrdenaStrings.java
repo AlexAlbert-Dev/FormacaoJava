@@ -3,7 +3,6 @@ package br.com.alura.java.java8;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class OrdenaStrings {
 
@@ -18,17 +17,13 @@ public class OrdenaStrings {
 		palavras.sort(comparador);
 		System.out.println(palavras);
 		
-		Consumer<String> consumidor = new ImprimeNaLinha();
-		palavras.forEach(consumidor);
+		palavras.forEach((String s) -> {
+				System.out.println(s);
+		});
+		
 	}
 }
 
-class ImprimeNaLinha implements Consumer<String> {
-	@Override
-	public void accept(String s) {
-		System.out.println(s);
-	}
-}
 
 class ComparadorPorTamanho implements Comparator<String> {
 	@Override
