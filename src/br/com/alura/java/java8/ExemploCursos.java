@@ -3,7 +3,6 @@ package br.com.alura.java.java8;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 
 class Curso {
 	private String nome;
@@ -40,11 +39,10 @@ public class ExemploCursos {
 		
 		System.out.println(sum);
 		
-		Optional<Curso> optionalCurso = cursos.stream()
+		cursos.stream()
 			.filter(c -> c.getAlunos() >= 100)
-			.findAny();
+			.findAny()
+			.ifPresent(c -> System.out.println(c.getNome()));
 		
-		Curso curso = optionalCurso.orElse(null);
-		System.out.println(curso.getNome());
 	}
 }
