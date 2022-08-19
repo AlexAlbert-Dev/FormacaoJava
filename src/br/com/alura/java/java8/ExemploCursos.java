@@ -32,9 +32,11 @@ public class ExemploCursos {
 		
 		cursos.sort(Comparator.comparing(Curso::getAlunos));
 		
-		cursos.stream()
-		.filter(c -> c.getAlunos() >= 100)
-		.map(Curso::getAlunos)
-		.forEach(System.out::println);
+		int sum = cursos.stream()
+			.filter(c -> c.getAlunos() >= 100)
+			.mapToInt(Curso::getAlunos)
+			.sum();
+		
+		System.out.println(sum);
 	}
 }
