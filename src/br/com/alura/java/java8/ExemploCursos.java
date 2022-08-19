@@ -31,8 +31,9 @@ public class ExemploCursos {
 		cursos.add(new Curso("C", 55));
 		
 		cursos.sort(Comparator.comparing(Curso::getAlunos));
-		cursos.forEach(System.out::println);
 		
-		cursos.forEach(c -> System.out.println(c.getNome()));	
+		cursos.stream()
+		.filter(c -> c.getAlunos() >= 100)
+		.forEach(c -> System.out.println(c.getNome()));	
 	}
 }
